@@ -216,3 +216,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# RideMetrics — Data Privacy Protection
+*.csv
+*.xls
+data/
+raw_data/
+
+# MSSQL files
+*.mdf
+*.ldf
+*.bak
+*.sql.bak
+
+# Power BI files
+*.pbix
+*.pbit
+
+
