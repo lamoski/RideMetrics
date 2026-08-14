@@ -80,3 +80,60 @@ This project follows the **Medallion Architecture** implemented in Microsoft SQL
 ---
 
 ## 📁 Repository Structure
+---
+
+## 🔑 Key Findings
+
+| Finding | Result |
+|---|---|
+| Most profitable hour | Hour 16 (4PM) — 22.4 PLN avg |
+| Most profitable day | Friday — 21.5 PLN avg |
+| Most profitable month | October — 10,011 PLN |
+| Busiest hour | Hour 16 — 517 trips |
+| Busiest day | Saturday — 1,146 trips |
+| Busiest season | Autumn — 1,600 trips |
+| Avg Uber deduction | 28.90% |
+| Avg earnings per km | 3.10 PLN/km |
+| Total revenue (16 months) | 79,310 PLN |
+| Total net earnings | 57,140 PLN |
+
+---
+
+## 🛠️ Tools & Technologies
+
+| Category | Tools |
+|---|---|
+| Programming | Python 3.13, pandas, matplotlib, seaborn |
+| Machine Learning | scikit-learn, XGBoost |
+| Database | Microsoft SQL Server (MSSQL) |
+| Business Intelligence | Power BI |
+| Data Exploration | Excel, SQL |
+| Development | Jupyter Notebook, VS Code |
+| Version Control | GitHub |
+| Documentation | Notion |
+
+---
+
+## ⚠️ Data Limitations
+
+- No location data — geographic analysis not possible
+- Bolt payment data excluded from all financial analysis due to data quality issues
+- Data reflects a single driver's experience in Łódź, Poland
+- External factors such as weather and traffic not captured
+- 48 cancelled trips excluded from ML training data
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository
+```bash
+git clone https://github.com/lamoski/RideMetrics.git
+```
+
+2. Install dependencies
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn xgboost pyodbc sqlalchemy
+```
+
+3. Connect to MSSQL and run notebooks in order:
