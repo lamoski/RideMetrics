@@ -32,13 +32,13 @@ Motivated by the need to maximise earnings while balancing academic commitments,
 ![Revenue Overview](https://github.com/lamoski/RideMetrics/blob/main/Screenshots/Revenue_Overview.png)
 
 ### Page 2: Demand Patterns
-![Demand Patterns](screenshots/page2_demand_patterns.png)
+![Demand Patterns](https://github.com/lamoski/RideMetrics/blob/main/Screenshots/Demand_Pattern.png)
 
 ### Page 3: ML Insights
-![ML Insights](screenshots/page3_ml_insights.png)
+![ML Insights](https://github.com/lamoski/RideMetrics/blob/main/Screenshots/ML_Insights.png)
 
 ### Page 4: Trip Analysis
-![Trip Analysis](screenshots/page4_trip_analysis.png)
+![Trip Analysis](https://github.com/lamoski/RideMetrics/blob/main/Screenshots/Trip_Analysis.png)
 
 ---
 
