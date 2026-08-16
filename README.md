@@ -63,7 +63,7 @@ RideMetrics/
 ├── RideMetrics.pbix
 ├── RideMetrics.sql
 ├── notebooks/
-│   ├── RideMetrics_Bronze_Silver_Gold.ipynb
+│   ├── RideMetrics_Bronze_Silver_Gold_+_EDA.ipynb
 │   └── RideMetrics_Machine_Learning.ipynb
 ├── rawfiles/
 │   └── (adjusted CSV files — privacy columns removed)
