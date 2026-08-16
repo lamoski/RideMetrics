@@ -29,7 +29,7 @@ Motivated by the need to maximise earnings while balancing academic commitments,
 ## 📊 Dashboard Preview
 
 ### Page 1: Revenue Overview
-![Revenue Overview](screenshots/page1_revenue_overview.png)
+![Revenue Overview](https://github.com/lamoski/RideMetrics/blob/main/Screenshots/Revenue_Overview.png)
 
 ### Page 2: Demand Patterns
 ![Demand Patterns](screenshots/page2_demand_patterns.png)
