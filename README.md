@@ -63,7 +63,7 @@ RideMetrics/
 ├── RideMetrics.pbix
 ├── RideMetrics.sql
 ├── notebooks/
-│   ├── RideMetrics.ipynb
+│   ├── RideMetrics_Bronze_Silver_Gold.ipynb
 │   └── RideMetrics_Machine_Learning.ipynb
 ├── rawfiles/
 │   └── (adjusted CSV files — privacy columns removed)
@@ -85,7 +85,7 @@ RideMetrics/
 | Business Question | Finding |
 |---|---|
 | Most profitable hour | Hour 16 (4PM) — 22.4 PLN avg per trip |
-| Most profitable day | Friday — 21.5 PLN avg per trip |
+| Most profitable day | Saturday — 21.7 PLN avg per trip |
 | Most profitable month | October — 10,011 PLN net earnings |
 | Busiest hour | Hour 16 — 517 trips (Uber + Bolt) |
 | Busiest day | Saturday — 1,146 trips |
@@ -140,7 +140,7 @@ RideMetrics/
 | # | Business Question | Key Finding |
 |---|---|---|
 | 1 | Which hour generates highest earnings? | Hour 16 (4PM) — 22.4 PLN avg |
-| 2 | Which day is most profitable? | Friday — 21.5 PLN avg |
+| 2 | Which day is most profitable? | Saturday — 21.7 PLN avg |
 | 3 | What are weekly and monthly earnings? | Peak week 2,574 PLN (Oct 2024) |
 | 4 | What is average Uber deduction rate? | 28.90% — approximately normal |
 | 5 | What is average earnings per km? | 3.10 PLN/km — right skewed |
@@ -202,8 +202,8 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost pyodbc sqlalche
 ### Run Notebooks in Order
 
 ```
-RideMetrics.ipynb                → Bronze, Silver, Gold layers + EDA
-RideMetrics_Machine_Learning.ipynb → ML models
+RideMetrics_Bronze_Silver_Gold.ipynb → Bronze, Silver, Gold layers + EDA
+RideMetrics_Machine_Learning.ipynb   → ML models
 ```
 
 ### Open Dashboard
