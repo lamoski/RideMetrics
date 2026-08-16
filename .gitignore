@@ -233,4 +233,10 @@ raw_data/
 # Internal working files
 RideMetrics_positions.xlsx
 
+# Raw data folders — private
+BOLT/
+Uber/
+*.csv
+
+
 
