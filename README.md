@@ -58,20 +58,24 @@ This project implements the **Medallion Architecture** in Microsoft SQL Server:
 
 <pre>
 RideMetrics/
+├── .gitignore
+├── README.md
+├── RideMetrics.pbix
+├── RideMetrics.sql
 ├── notebooks/
-│   ├── 01_bronze_ingestion.ipynb
-│   ├── 02_silver_cleaning.ipynb
-│   ├── 03_gold_aggregation.ipynb
-│   ├── 04_eda.ipynb
-│   └── 05_machine_learning.ipynb
+│   ├── RideMetrics.ipynb
+│   └── RideMetrics_Machine_Learning.ipynb
+├── rawfiles/
+│   └── (adjusted CSV files — privacy columns removed)
 ├── screenshots/
 │   ├── page1_revenue_overview.png
 │   ├── page2_demand_patterns.png
 │   ├── page3_ml_insights.png
 │   └── page4_trip_analysis.png
-├── RideMetrics.pbix
-├── .gitignore
-└── README.md
+└── documentation/
+    ├── RideMetrics_Documentation.pdf
+    ├── Ride_metrics_logs.xlsx
+    └── RideMetrics_Investigation_Notes.xlsx
 </pre>
 
 ---
@@ -104,9 +108,9 @@ RideMetrics/
 | Dataset | Combined Silver (Uber + Bolt) — 4,287 records |
 | Target | Demand category — High / Medium / Low |
 | Features | Hour, day of week, month, season, platform, distance, duration |
-| Accuracy | **96.4%** |
-| F1 Score | **96.1%** |
-| CV Mean F1 | **94.9%** (Std 3.6%) |
+| Accuracy | **95.7%** |
+| F1 Score | **95.3%** |
+| CV Mean F1 | **92.3%** (Std 5.8%) |
 
 ### Model 2: Earnings Prediction
 
@@ -145,7 +149,7 @@ RideMetrics/
 | 8 | Which hours have highest trip demand? | Hours 15-17 — afternoon peak |
 | 9 | Which day has highest trip volume? | Saturday — 1,146 trips |
 | 10 | Which season has highest demand? | Autumn — 1,600 trips |
-| 11 | Can patterns predict demand? | Yes — XGBoost 96.4% accuracy |
+| 11 | Can patterns predict demand? | Yes — XGBoost 95.7% accuracy |
 | 12 | Can patterns predict earnings? | Yes — Random Forest 76.7% accuracy |
 | 13 | Platform comparison | Uber consistently higher volume than Bolt |
 
@@ -154,11 +158,13 @@ RideMetrics/
 ## ⚠️ Data Limitations
 
 - No location data — geographic and route-level analysis not possible (GDPR compliance)
-- Bolt payment data excluded from all financial analysis due to three independent data quality issues — discounted payments, inconsistent recording times and incorrect ride dates
-- Data reflects a single driver's experience in Łódź, Poland and may not generalise to all drivers
-- External factors such as weather, traffic and local events not captured in the dataset
-- 48 cancelled trips with zero distance and duration excluded from ML training data — cancellation fees retained in revenue reporting tables
-- 12 special event days identified as statistical outliers and flagged with binary event indicator in ML earnings features
+- 48 cancelled trips with zero distance and duration excluded from ML training data — cancellation fees retained in all revenue reporting tables as they represent legitimate earnings
+- Data reflects a single driver's experience in Łódź, Poland and may not generalise to all drivers or other cities
+- External factors such as weather, traffic conditions and local events are not captured in the dataset
+- Bolt payment data excluded from all financial analysis due to three independent data quality issues — discounted customer payments only, inconsistent payment recording times and date of ride values not corresponding to actual trip dates
+- Bolt payment table loaded into Bronze layer with 153,314 records but subsequently excluded from Silver layer
+- Uber driver incentives included in net earnings used for ML model training as they form part of actual earnings received
+- 12 special event days identified as statistical outliers and flagged with binary event indicator in ML earnings features table — verified against Łódź event records including concerts at Atlas Arena, cultural events and public holidays
 
 ---
 
@@ -196,11 +202,8 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost pyodbc sqlalche
 ### Run Notebooks in Order
 
 ```
-01_bronze_ingestion.ipynb   → Load raw CSV data into Bronze layer
-02_silver_cleaning.ipynb    → Clean and merge data into Silver layer
-03_gold_aggregation.ipynb   → Aggregate data into Gold layer
-04_eda.ipynb                → Exploratory data analysis
-05_machine_learning.ipynb   → Train and evaluate ML models
+RideMetrics.ipynb                → Bronze, Silver, Gold layers + EDA
+RideMetrics_Machine_Learning.ipynb → ML models
 ```
 
 ### Open Dashboard
@@ -220,7 +223,19 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost pyodbc sqlalche
 | Bolt | Trip Details | 1,586 (Silver) | Sep 2024 — Feb 2026 |
 | Bolt | Payment Details | Excluded | — |
 
-> Raw data not included in repository — personally collected through active driving in Łódź, Poland.
+> Raw data privacy columns removed before inclusion in repository. Original data personally collected through active driving in Łódź, Poland.
+
+---
+
+## 📄 Documentation
+
+| File | Description |
+|---|---|
+| RideMetrics_Documentation.pdf | Full project documentation |
+| Ride_metrics_logs.xlsx | Data quality log |
+| RideMetrics_Investigation_Notes.xlsx | Investigation and exploration notes |
+
+Full project documentation including methodology, EDA mapping and decision log also available on Notion.
 
 ---
 
@@ -229,12 +244,6 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost pyodbc sqlalche
 **Olamide Adebayo**
 Data Analytics Student — Łódź, Poland
 GitHub: [@lamoski](https://github.com/lamoski)
-
----
-
-## 📄 Full Documentation
-
-Complete project documentation including data description, methodology, EDA mapping and decision log available on Notion.
 
 ---
 
