@@ -230,5 +230,7 @@ raw_data/
 *.sql.bak
 
 
+# Internal working files
+RideMetrics_positions.xlsx
 
 
