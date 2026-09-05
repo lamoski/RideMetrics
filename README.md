@@ -107,22 +107,22 @@ RideMetrics/
 | Algorithm | XGBoost |
 | Dataset | Combined Silver (Uber + Bolt) — 4,287 records |
 | Target | Demand category — High / Medium / Low |
-| Features | Hour, day of week, month, season, platform, distance, duration |
-| Accuracy | **95.7%** |
-| F1 Score | **95.3%** |
-| CV Mean F1 | **92.3%** (Std 5.8%) |
+| Features | hour_minutes, month, day of week, season, period_Morning |
+| Accuracy | **96.5%** |
+| F1 Score | **96.3%** |
+| CV Mean F1 | **96.5%** (Std 0.63%) |
 
 ### Model 2: Earnings Prediction
 
 | Item | Detail |
 |---|---|
-| Algorithm | Random Forest |
+| Algorithm | Logistic Regression |
 | Dataset | Uber Silver (hourly aggregated) — 1,561 records |
 | Target | Earnings category — High / Medium / Low |
-| Features | Hour, day of week, month, season, avg distance, avg duration, total trips, demand score |
-| Accuracy | **76.7%** |
-| F1 Score | **76.4%** |
-| CV Mean F1 | **77.8%** (Std 1.3%) |
+| Features | total_trips, avg_distance_km, avg_duration_minutes, demand_score, period_Morning, period_Evening |
+| Accuracy | **77.0%** |
+| F1 Score | **77.2%** |
+| CV Mean F1 | **78.9%** (Std 1.96%) |
 
 ### Combined Shift Recommendation Engine
 
