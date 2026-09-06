@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
 ![MSSQL](https://img.shields.io/badge/MSSQL-Medallion%20Architecture-red)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
-![Machine Learning](https://img.shields.io/badge/ML-XGBoost%20%7C%20Random%20Forest-green)
+![Machine Learning](https://img.shields.io/badge/ML-XGBoost%20%7C%20Logistic%20Regression-green)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 ## 📌 Project Overview
