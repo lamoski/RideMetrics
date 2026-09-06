@@ -149,8 +149,8 @@ RideMetrics/
 | 8 | Which hours have highest trip demand? | Hours 15-17 — afternoon peak |
 | 9 | Which day has highest trip volume? | Saturday — 1,146 trips |
 | 10 | Which season has highest demand? | Autumn — 1,600 trips |
-| 11 | Can patterns predict demand? | Yes — XGBoost 95.7% accuracy |
-| 12 | Can patterns predict earnings? | Yes — Random Forest 76.7% accuracy |
+| 11 | Can patterns predict demand? | Yes — XGBoost 96.5% accuracy |
+| 12 | Can patterns predict earnings? | Yes — Logistic Regression 77.0% accuracy |
 | 13 | Platform comparison | Uber consistently higher volume than Bolt |
 
 ---
