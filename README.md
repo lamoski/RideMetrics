@@ -65,8 +65,6 @@ RideMetrics/
 ├── notebooks/
 │   ├── RideMetrics_Bronze_Silver_Gold_+_EDA.ipynb
 │   └── RideMetrics_Machine_Learning.ipynb
-├── rawfiles/
-│   └── (adjusted CSV files — privacy columns removed)
 ├── screenshots/
 │   ├── page1_revenue_overview.png
 │   ├── page2_demand_patterns.png
