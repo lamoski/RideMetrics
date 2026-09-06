@@ -229,6 +229,11 @@ raw_data/
 *.bak
 *.sql.bak
 
+# Raw data folders — platform terms of service
+rawfiles/
+
+# Excel working files
+documentation/*.xlsx
 
 # Internal working files
 RideMetrics_positions.xlsx
