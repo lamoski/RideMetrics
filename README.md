@@ -233,6 +233,12 @@ Project timeline and EDA mapping are available on Notion.
 
 ---
 
+## ⚠️ License & Data Notice
+
+**Code:** Feel free to use and adapt the code for your own projects.
+
+**Data:** Raw trip data is not included in this repository due to platform terms of service. Data was personally collected through active driving on Uber and Bolt platforms in Łódź, Poland (September 2024 — February 2026).
+
 ## 👤 Author
 
 **Olamide Adebayo**
