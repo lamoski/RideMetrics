@@ -71,9 +71,7 @@ RideMetrics/
 │   ├── page3_ml_insights.png
 │   └── page4_trip_analysis.png
 └── documentation/
-    ├── RideMetrics_Documentation.pdf
-    ├── Ride_metrics_logs.xlsx
-    └── RideMetrics_Investigation_Notes.xlsx
+    └── RideMetrics_Documentation.pdf
 </pre>
 
 ---
@@ -230,8 +228,6 @@ RideMetrics_Machine_Learning.ipynb   → ML models
 | File | Description |
 |---|---|
 | RideMetrics_Documentation.pdf | Full project documentation |
-| Ride_metrics_logs.xlsx | Data quality log |
-| RideMetrics_Investigation_Notes.xlsx | Investigation and exploration notes |
 
 Project timeline and EDA mapping are available on Notion.
 
