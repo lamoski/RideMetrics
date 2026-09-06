@@ -235,7 +235,7 @@ RideMetrics_Machine_Learning.ipynb   → ML models
 | Ride_metrics_logs.xlsx | Data quality log |
 | RideMetrics_Investigation_Notes.xlsx | Investigation and exploration notes |
 
-Full project documentation including methodology, EDA mapping and decision log also available on Notion.
+Project timeline and EDA mapping are available on Notion.
 
 ---
 
