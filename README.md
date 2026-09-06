@@ -221,7 +221,7 @@ RideMetrics_Machine_Learning.ipynb   → ML models
 | Bolt | Trip Details | 1,586 (Silver) | Sep 2024 — Feb 2026 |
 | Bolt | Payment Details | Excluded | — |
 
-> Raw data privacy columns removed before inclusion in repository. Original data personally collected through active driving in Łódź, Poland.
+> Raw data not included in this repository due to platform terms of service. Data was personally collected through active driving in Łódź, Poland (September 2024 — February 2026).
 
 ---
 
